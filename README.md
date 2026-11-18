@@ -1,16 +1,100 @@
-# React + Vite
+# DocuMind AI – AI-Powered Technical Document Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+DocuMind AI is a web-based application designed to simplify technical document analysis. It allows users to upload PDF documents, extract text automatically, and prepare documents for AI-powered analysis.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **PDF Upload:** Upload technical PDF documents through an interactive interface.
+- **File Validation:** Validates PDF format, file signature and file size.
+- **Text Extraction:** Extracts text from PDF documents using PyMuPDF.
+- **Multi-page Processing:** Extracts text from all pages of uploaded documents.
+- **Dashboard:** Displays document statistics and recent activity.
+- **REST API:** Backend APIs developed using FastAPI.
+- **AI Integration:** Gemini API integration planned for intelligent document summarization.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend:**
+- React.js
+- JavaScript
+- CSS
+- Vite
 
-## Expanding the Oxlint configuration
+**Backend:**
+- Python
+- FastAPI
+- PyMuPDF
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**AI:**
+- Google Gemini API (integration in progress)
+
+**Development Tools:**
+- Visual Studio Code
+- Git
+- GitHub
+
+## Project Architecture
+
+React Frontend → FastAPI Backend → PDF Processing → Text Extraction → AI Analysis (planned)
+
+## Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/samiksham54/DocuMind-AI.git
+cd DocuMind-AI
+```
+
+### 2. Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+```
+
+Activate the virtual environment on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the backend:
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Backend URL: http://127.0.0.1:8000
+
+API Documentation: http://127.0.0.1:8000/docs
+
+### 3. Frontend Setup
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend URL: http://localhost:5173
+
+## Project Status
+
+The React frontend, PDF upload functionality, PDF validation and text extraction features have been implemented.
+
+Gemini-powered summarization is under development.
+
+## Developer
+
+Developed as an independent full-stack development project to gain practical experience in web application development, backend API integration and applied AI.
+
+**GitHub Repository:** https://github.com/samiksham54/DocuMind-AI
